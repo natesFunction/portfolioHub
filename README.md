@@ -1,9 +1,5 @@
-Certainly! Here is a README.txt file that outlines the algorithm of your dynamic web application, based on the HTML code provided:
 
-```plaintext
-README.TXT
-
-Nathan Green Project Hosting Web Application
+Nathan Green project portfolioHub Application
 
 This document describes the web application designed to host and display Nathan Green's IT and programming projects.
 
