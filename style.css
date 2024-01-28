@@ -89,4 +89,14 @@ button:hover {
     background-color: #1A3951; /* Dark Blue project details background */
     border-radius: 10px;
 }
+/* Link styles */
+a {
+    color: #FFD700; /* Gold color for links */
+    text-decoration: none; /* Removes underline from links */
+}
+
+a:hover {
+    color: #FFA500; /* Orange color on hover for links */
+    text-decoration: underline; /* Underline on hover for better visibility */
+}
 
