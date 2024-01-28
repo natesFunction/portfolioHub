@@ -11,6 +11,7 @@ Technology Stack:
 - HTML
 - CSS
 - JavaScript
+- Git
 
 Algorithm Overview:
 1. The home page loads with a main header displaying "Nathan Green Project Host."
