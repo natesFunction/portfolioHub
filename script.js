@@ -9,7 +9,7 @@ function displayProject(projectId){
             role: "Lead Developer and Designer",
             contributions: "Designed the UI/UX, developed the front-end and back-end, and deployed the application.",
             learningOutcomes: "Gained proficiency in program development and deepened understanding of web deployment processes.",
-            codeRepo: "https://github.com/myusername/portfolio-hub"
+            codeRepo: "https://github.com/natesFunction/portfolioHub"
         },
 
         
