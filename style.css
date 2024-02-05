@@ -1,102 +1,126 @@
-/* Remove bullet points from the list */
-.no-bullets {
-    list-style-type: none;
-    padding: 0;
-}
 /* Reset some default styles */
-body, h1, h2, h3, p, ul, li, button {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
 
-/* Set a background color and fonts */
+/* Remove bullet points from the list */
+ul.no-bullets {
+    list-style-type: none;
+}
+
+/* Center the content boxes in the middle of the screen */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #0D233B; /* Deep Blue background */
     color: #FFFFFF; /* White text */
+    line-height: 1.6;
+    padding: 20px; /* Adds padding around the content of the entire page */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
 }
 
 /* Container styles for the content */
 .container {
+    width: 100%;
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
     background-color: #1A3951; /* Dark Blue container background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Slightly darker shadow */
-    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Slightly darker shadow for depth */
+    border-radius: 10px; /* Rounded corners for the container */
+    padding: 20px;
+    margin-bottom: 30px; /* Adds space between sections */
 }
 
 /* Header styles */
-h1 {
-    font-size: 48px;
+h1, h2, h3 {
     color: #C0C0C0; /* Metal-looking Grey color */
-    margin-bottom: 10px;
+    margin-bottom: 20px; /* Adds bottom margin to each header */
+}
+
+h1 {
+    font-size: 2.5em; /* Responsive font size for the main title */
+    text-align: left;
 }
 
 h2 {
-    font-size: 36px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    font-size: 2em; /* Responsive font size for section titles */
+    text-align: left;
 }
 
 h3 {
-    font-size: 28px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    font-size: 1.75em; /* Responsive font size for subsection titles */
+    text-align: left;
 }
 
 /* Paragraph styles */
 p {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 1em; /* Standard font size for text */
+    margin-bottom: 20px; /* Adds bottom margin to paragraphs */
+    text-align: left;
 }
 
 /* Unordered list styles */
 ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-left: 20px; /* Adds left margin for traditional list indentation */
+    text-align: left;
 }
 
 li {
-    font-size: 20px;
-    line-height: 1.6;
+    margin-bottom: 10px; /* Adds bottom margin to list items */
 }
 
 /* Button styles */
 button {
-    padding: 15px 30px;
-    font-size: 24px;
-    width: 400px; /* Set a fixed width */
-    height: 50px; /* Set a fixed height */
+    display: block; /* Ensures that buttons are block-level elements */
+    margin: 10px 0; /* Adds margin above and below each button */
+    width: auto; /* Ensures buttons are only as wide as their content */
+    max-width: 400px; /* Maximum width of buttons to maintain usability */
+    padding: 10px 15px; /* Appropriate padding inside buttons */
     background-color: #C0C0C0; /* Metal-looking Grey color */
-    color: #FFFFFF; /* White text */
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    color: #0D233B; /* Text color contrasts with button background */
+    border: 2px solid transparent; /* Adds a border that becomes visible on hover */
+    border-radius: 5px; /* Smoother rounded corners on buttons */
+    font-weight: bold; /* Makes button text bold */
+    text-transform: uppercase; /* Transforms button text to uppercase for emphasis */
+    letter-spacing: 1px; /* Increases spacing between letters for readability */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    align-self: center; /* Centers buttons in their container */
 }
 
 button:hover {
     background-color: #808080; /* Darker Grey shade on hover */
+    border-color: #FFD700; /* Changes border color to gold on hover for emphasis */
 }
 
 /* Project details styles */
 #projectDetails {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #1A3951; /* Dark Blue project details background */
-    border-radius: 10px;
+    background-color: #1A3951; /* Dark Blue for project details background */
+    border-radius: 10px; /* Rounded corners for the project details container */
+    padding: 20px; /* Padding inside the project details container */
+    text-align: left;
 }
+
 /* Link styles */
 a {
-    color: #FFD700; /* Gold color for links */
-    text-decoration: none; /* Removes underline from links */
+    color: #FFD700; /* Gold color for links to stand out */
+    text-decoration: none; /* No underline to maintain a clean look */
 }
 
 a:hover {
     color: #FFA500; /* Orange color on hover for links */
-    text-decoration: underline; /* Underline on hover for better visibility */
+    text-decoration: underline; /* Underline on hover for links to indicate interactivity */
 }
 
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
