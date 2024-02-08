@@ -1,7 +1,9 @@
+// Object containing detailed information about projects
 const projectDetails = {
     'project1': {
+         // Basic information about the 'Portfolio Hub' project
         title: 'Portfolio Hub',
-        description: "This web application represents my inaugural project and serves as a gateway to my growing portfolio of professional IT projects. It showcases a variety of applications and systems I've developed or contributed to, highlighting my proficiency in IT management, database support, and system coordination. It also reflects my dedication to enhancing operational efficiency and my capability to implement and utilize IT infrastructures.",
+        description: "This web application represents my inaugural project and serves as a gateway to my growing portfolio of professional IT projects.",
         technologies: "HTML, CSS, JavaScript",
         challenges: "Implementing responsive design. Implementing visually appealing design.",
         results: "Successfully created a user-friendly portfolio site that improved project visibility and professional outreach.",
@@ -11,6 +13,7 @@ const projectDetails = {
         codeRepo: "https://github.com/natesFunction/portfolioHub"
     },
     'project2': {
+        // Details of the 'Domain Setup Journey' project
         title: 'Domain Setup Journey',
         description: "This project encapsulates my experience of purchasing and setting up a custom domain for my portfolio. It demonstrates the challenges and learnings in domain management and website hosting.",
         technologies: "Domain Management, GitHub Pages",
@@ -28,14 +31,17 @@ const projectDetails = {
         </ol>`,
         source: "https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages/"
     },
-    // add more projects here
+    
 };
-
+// Function to display project details based on selected projectId
 function displayProject(projectId) {
+    // Retrieve project information using projectId
     const project = projectDetails[projectId];
     if (project) {
+        // Initialize HTML content for the selected project
         let projectHTML = `<h3>${project.title}</h3><p>${project.description}</p>`;
 
+         // Define detail fields to display for each project
         const detailFields = [
             { label: 'Technologies Used', key: 'technologies' },
             { label: 'Challenges Overcome', key: 'challenges' },
@@ -48,18 +54,22 @@ function displayProject(projectId) {
             { label: 'Source', key: 'source' }
         ];
 
+        // Loop through each detail field and append its content to projectHTML
         detailFields.forEach(detail => {
             if (project[detail.key]) {
+                // For 'codeRepo' and 'source', provide a hyperlink
                 if (detail.key === 'codeRepo' || detail.key === 'source') {
                     projectHTML += `<p><strong>${detail.label}:</strong> <a href="${project[detail.key]}" target="_blank">Link</a></p>`;
                 } else if (detail.key === 'instructions') {
+                    // For 'instructions', include as is
                     projectHTML += `<p><strong>${detail.label}:</strong> ${project[detail.key]}</p>`;
                 } else {
+                    // For other fields, append the value
                     projectHTML += `<p><strong>${detail.label}:</strong> ${project[detail.key]}</p>`;
                 }
             }
         });
-
+        // Update the HTML of the 'projectDetails' element with the constructed content
         document.getElementById('projectDetails').innerHTML = projectHTML;
     }
 }
